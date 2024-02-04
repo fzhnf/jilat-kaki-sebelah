@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    #canvas-wrap {
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      overflow: hidden;
+      border: 1px solid black;
+      width: 1200px;
+      height: 600px;
+    }
+
+    #objectPoint,
+    #imagePoint,
+    #doubleFocusPoint,
+    #focusPoint {
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      /* a circle */
+      opacity: 0.5;
+      position: absolute;
+      transform: translate(-50%, -50%);
+    }
+
+    #focusPoint {
+      background-color: lightblue;
+      top: 300px;
+      left: 500px;
+      cursor: grab;
+    }
+
+    #doubleFocusPoint {
+      background-color: pink;
+      top: 300px;
+      left: 400px;
+    }
+
+    #objectPoint {
+      background-color: red;
+      top: 200px;
+      left: 300px;
+      cursor: grab;
+    }
+
+    #imagePoint {
+      background-color: blue;
+      top: 350px;
+      left: 450px;
+    }
+
+    #objectPoint:hover {
+      width: 20px;
+      height: 20px;
+    }
+
+    #focusPoint:hover {
+      width: 20px;
+      height: 20px;
+    }
+
+    #objectPoint:active {
+      width: 15px;
+      height: 15px;
+    }
+
+    #focusPoint:active {
+      width: 15px;
+      height: 15px;
+    }
+  </style>
+  <title>Canvas Drawing</title>
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <div id="canvas-wrap">
+    <canvas id="canvas" width="1200" height="600"></canvas>
+    <div id="doubleFocusPoint"></div>
+    <div id="imagePoint"></div>
+    <div id="focusPoint"></div>
+    <div id="objectPoint"></div>
+  </div>
+</body>
+
+</html>
